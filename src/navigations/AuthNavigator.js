@@ -2,7 +2,7 @@ import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
 import {Login, ForgotPassword, Register} from '../screens';
 import {COLORS, ROUTES} from '../constants';
-import BottomTabNavigator from './BottomTabNavigator';
+import DrawerNavigator from './DrawerNavigator';
 
 const Stack = createStackNavigator();
 // return Object contains: Navigator, Screen, Group
@@ -35,7 +35,7 @@ function AuthNavigator() {
       <Stack.Screen name={ROUTES.REGISTER} component={Register} />
       <Stack.Screen
         name={ROUTES.HOME}
-        component={BottomTabNavigator}
+        component={DrawerNavigator}
         options={{
           headerShown: false, // header cua navigator hien tai
           gestureEnabled: false, // tat vuot nguoc khi vao home
